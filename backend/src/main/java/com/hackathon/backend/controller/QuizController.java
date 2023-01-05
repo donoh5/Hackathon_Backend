@@ -16,12 +16,12 @@ public class QuizController {
     QuizService quizService;
 
     @PostMapping("/quiz")
-    public ResponseEntity<List<Quiz>> getAllQuizPerLesson(@RequestParam String lessonID) {
-        return ResponseEntity.ok().body(quizService.getAllQuizPerLesson(lessonID));
+    public ResponseEntity<List<Quiz>> getAllQuizPerClassroom(@RequestParam String classroomID) {
+        return ResponseEntity.ok().body(quizService.getAllQuizPerClassroom(classroomID));
     }
 
     @PostMapping("/createQuiz")
-    public ResponseEntity<Quiz> createLearning(@RequestBody Quiz quiz) {
+    public ResponseEntity<Quiz> createQuiz(@RequestBody Quiz quiz) {
         return ResponseEntity.ok().body(quizService.createQuiz(quiz));
     }
 

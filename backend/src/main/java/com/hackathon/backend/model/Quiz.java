@@ -8,7 +8,7 @@ import java.math.BigInteger;
 public class Quiz {
     @Id
     private BigInteger id;
-    private String lessonID;
+    private String classroomID;
     private int order;
     private String question;
     private byte[] pic1;
@@ -21,8 +21,8 @@ public class Quiz {
     private String desc4;
     private int answer;
 
-    public Quiz(String lessonID, String question, byte[] pic1, byte[] pic2, byte[] pic3, byte[] pic4, String desc1, String desc2, String desc3, String desc4, int answer) {
-        this.lessonID = lessonID;
+    public Quiz(String classroomID, String question, byte[] pic1, byte[] pic2, byte[] pic3, byte[] pic4, String desc1, String desc2, String desc3, String desc4, int answer) {
+        this.classroomID = classroomID;
         this.question = question;
         this.pic1 = pic1;
         this.pic2 = pic2;
@@ -43,12 +43,12 @@ public class Quiz {
         this.id = id;
     }
 
-    public String getLessonID() {
-        return lessonID;
+    public String getClassroomID() {
+        return classroomID;
     }
 
-    public void setLessonID(String lessonID) {
-        this.lessonID = lessonID;
+    public void setClassroomID(String classroomID) {
+        this.classroomID = classroomID;
     }
 
     public int getOrder() {

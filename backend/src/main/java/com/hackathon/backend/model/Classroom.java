@@ -4,18 +4,18 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 import java.math.BigInteger;
 
-@Document(collection = "lesson")
-public class Lesson {
+@Document(collection = "classroom")
+public class Classroom {
     @Id
     private BigInteger id;
-    private String lessonID;
+    private String classroomID;
     private String title;
     private String category;
     private int likes;
     private double rating;
     private int ratingCount;
 
-    public Lesson(String title, String category) {
+    public Classroom(String title, String category) {
         this.title = title;
         this.category = category;
     }
@@ -28,12 +28,12 @@ public class Lesson {
         this.id = id;
     }
 
-    public String getLessonID() {
-        return lessonID;
+    public String getClassroomID() {
+        return classroomID;
     }
 
-    public void setLessonID(String lessonID) {
-        this.lessonID = lessonID;
+    public void setClassroomID(String classroomID) {
+        this.classroomID = classroomID;
     }
 
     public String getTitle() {

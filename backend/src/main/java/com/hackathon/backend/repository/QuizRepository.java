@@ -8,5 +8,5 @@ import java.util.List;
 import java.util.Optional;
 
 public interface QuizRepository extends MongoRepository<Quiz, BigInteger> {
-    List<Quiz> findByLessonID(String lessonID);
+    List<Quiz> findByClassroomID(String classroomID);
 }

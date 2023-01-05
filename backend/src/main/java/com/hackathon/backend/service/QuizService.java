@@ -8,5 +8,5 @@ import com.hackathon.backend.model.Quiz;
 public interface QuizService {
     Quiz createQuiz(Quiz quiz);
 
-    List<Quiz> getAllQuizPerLesson(String lessonID);
+    List<Quiz> getAllQuizPerClassroom(String classroomID);
 }

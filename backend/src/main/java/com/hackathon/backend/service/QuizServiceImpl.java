@@ -20,14 +20,14 @@ public class QuizServiceImpl implements QuizService {
 
     @Override
     public Quiz createQuiz(Quiz quiz) {
-        List<Quiz> quizzes = this.quizRepository.findByLessonID(quiz.getLessonID());
+        List<Quiz> quizzes = this.quizRepository.findByClassroomID(quiz.getClassroomID());
         quiz.setOrder(quizzes.size() + 1);
 
         return quizRepository.save(quiz);
     }
 
     @Override
-    public List<Quiz> getAllQuizPerLesson(String lessonID) {
-        return this.quizRepository.findByLessonID(lessonID);
+    public List<Quiz> getAllQuizPerClassroom(String classroomID) {
+        return this.quizRepository.findByClassroomID(classroomID);
     }
 }
